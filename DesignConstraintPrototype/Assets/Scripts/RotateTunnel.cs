@@ -5,8 +5,11 @@ public class RotateTunnel : MonoBehaviour
 {
     #region Instance Variables
     [SerializeField]
-    [Tooltip("The amount to rotate (angles) the tunnel")]
-    private float rotationAmount = 90.0f;
+    [Tooltip("The amount to rotate left (angles ) the tunnel")]
+    private float rotationAmountLeft = 90.0f;
+    [SerializeField]
+    [Tooltip("The amount to rotate right (angles negative) the tunnel")]
+    private float rotationAmountRight = -90.0f;
     [SerializeField]
     [Tooltip("The amount of time it takes to rotate the tunnel (in seconds)")]
     private float timeToRotate = 1.0f;
@@ -37,25 +40,25 @@ public class RotateTunnel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //this.gameObject.transform.RotateAround(Vector3.zero, Vector3.forward, 1.0f);
-        if (Input.GetKeyDown(KeyCode.Space) && !isRotating)
+        if (!isRotating)
         {
-            isRotating = true;
-            StartCoroutine(RotateTunnelOverTime(timeToRotate));
-            //this.gameObject.transform.RotateAround(rotationPoint, Vector3.forward, rotationAmount);
-            //this.gameObject.transform.Rotate(0, 0, 90.0f);
-
-            //for (int i = 0; i < this.gameObject.transform.childCount; i++)
-            //{
-            //    this.gameObject.transform.GetChild(i).transform.RotateAround(Vector3.zero, Vector3.forward, rotationAmount);
-            //}
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                isRotating = true;
+                StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountLeft));
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                isRotating = true;
+                StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountRight));
+            }
         }
     }
 
-    private IEnumerator RotateTunnelOverTime(float timeToRotate)
+    private IEnumerator RotateTunnelOverTime(float timeToRotate, float rotateAmount)
     {
         float currentRotation = this.gameObject.transform.eulerAngles.z;
-        float targetRotation = currentRotation + rotationAmount;
+        float targetRotation = currentRotation + rotateAmount;
 
         float elapsedTime = 0;
         ball.GetComponent<Rigidbody>().isKinematic = true;
@@ -63,7 +66,7 @@ public class RotateTunnel : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float zRotationAmount = Mathf.Lerp(currentRotation, targetRotation, elapsedTime / timeToRotate);
-            this.gameObject.transform.RotateAround(rotationPoint, Vector3.forward, Mathf.Abs(zRotationAmount - this.gameObject.transform.eulerAngles.z));
+            this.gameObject.transform.RotateAround(rotationPoint, Vector3.forward, zRotationAmount - this.gameObject.transform.eulerAngles.z);
 
             yield return null;
         }

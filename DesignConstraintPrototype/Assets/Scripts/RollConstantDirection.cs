@@ -2,7 +2,7 @@
 
 public enum Direction
 {
-    Forward, Right, Back, Left, ForwardRight, BackRight, BackLeft, ForwardLeft
+    Forward, Right, Back, Left
 };
 
 public class RollConstantDirection : MonoBehaviour
@@ -44,20 +44,6 @@ public class RollConstantDirection : MonoBehaviour
             case Direction.Left:
                 objectMovementDirection = Vector3.left;
                 objectMovementRotation = Vector3.forward;
-                break;
-            case Direction.ForwardRight:
-                objectMovementDirection = new Vector3(1, 0, 1);
-                //objectMovementRotation = new Vector3(1, 0, -1);
-                break;
-            case Direction.BackRight:
-                objectMovementDirection = new Vector3(1, 0, -1);
-                //objectMovementRotation = new Vector3(-1, 0, -1);
-                break;
-            case Direction.BackLeft:
-                objectMovementDirection = new Vector3(-1, 0, -1);
-                break;
-            case Direction.ForwardLeft:
-                objectMovementDirection = new Vector3(-1, 0, 1);
                 break;
             default:
                 objectMovementDirection = Vector3.forward;

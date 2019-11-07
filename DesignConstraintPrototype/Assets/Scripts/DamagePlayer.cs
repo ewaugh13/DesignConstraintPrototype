@@ -38,7 +38,6 @@ public class DamagePlayer : MonoBehaviour
             {
                 // Move the player to area 3 start
             }
-
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamagePlayer : MonoBehaviour
 {
@@ -21,26 +22,13 @@ public class DamagePlayer : MonoBehaviour
     // If the player enters a trigger, the player resets
     private void OnTriggerEnter(Collider other)
     {
-        if( other.gameObject.tag.Equals("Player") )
+        if (other.tag.Equals("Player"))
         {
-            // get the current position of the player
-            ObstacleArea = this.gameObject.tag;
+            // Display score
 
-            if( ObstacleArea == "Area1" )
-            {
-                // Move the player to area 1 start
-            }
 
-            if ( ObstacleArea == "Area2" )
-            {
-                // Move the player to area 1 start
-            }
-
-            if (ObstacleArea == "Area3")
-            {
-                // Move the player to area 3 start
-            }
-
+            // Restart Scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

@@ -29,12 +29,13 @@ public class EnablePhysicsOnTap : MonoBehaviour
             m_Rigidbody = this.gameObject.GetComponent<Rigidbody>();
             m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             StartPosition = this.gameObject.transform.position;
-            CameraOffset.Set(0, -1, 3);
+            CameraOffset.Set(0, -1, 6);
         }
     }
 
     void Update()
     {
+        FollowCamera.transform.position = transform.position - CameraOffset;
         // Handle screen touches.
         if (Input.touchCount > 0 || Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {

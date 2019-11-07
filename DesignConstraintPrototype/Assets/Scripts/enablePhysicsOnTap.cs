@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enablePhysicsOnTap : MonoBehaviour
+public class EnablePhysicsOnTap : MonoBehaviour
 {
+
+    #region Hidden Variables
     private float width;
     private float height;
     private Vector3 StartPosition;
@@ -11,15 +13,15 @@ public class enablePhysicsOnTap : MonoBehaviour
     public GameObject FollowCamera;
     private Rigidbody m_Rigidbody;
     private bool wasTouched;
-    
+    #endregion
 
     void Awake()
     {
         width = (float)Screen.width / 2.0f;
         height = (float)Screen.height / 2.0f;
-        m_Rigidbody = GetComponent<Rigidbody>();
+        m_Rigidbody = this.gameObject.GetComponent<Rigidbody>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-        StartPosition = transform.position;
+        StartPosition = this.gameObject.transform.position;
         CameraOffset.Set(0, -1, 3);
     }
 
@@ -32,7 +34,6 @@ public class enablePhysicsOnTap : MonoBehaviour
             if (wasTouched == false)
             {
                 //Touch touch = Input.GetTouch(0);
-                print("test");
                 m_Rigidbody.constraints = RigidbodyConstraints.None;
                 transform.position = StartPosition;
                 m_Rigidbody.velocity.Set(0, 0, 0);
@@ -42,7 +43,6 @@ public class enablePhysicsOnTap : MonoBehaviour
             {
                 wasTouched = false;
             }
-
         }
         else
         {

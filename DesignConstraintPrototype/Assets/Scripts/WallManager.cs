@@ -16,7 +16,6 @@ public class WallManager : MonoBehaviour
     private int lastWallIndex = 0;
     #endregion
 
-    #region Start
     void Start()
     {
         activeWalls = new List<GameObject>();
@@ -34,9 +33,7 @@ public class WallManager : MonoBehaviour
             }
         }
     }
-    #endregion
 
-    #region Update
     void Update()
     {
         if((playerTransform.position.z - safeZone) > (spawnZ - (wallsOnScreen * wallLength)))
@@ -45,9 +42,7 @@ public class WallManager : MonoBehaviour
             DeleteWall();
         }
     }
-    #endregion
 
-    #region SpawnWall
     private void SpawnWall(int prefabIndex = -1)
     {
         GameObject wall;
@@ -59,22 +54,18 @@ public class WallManager : MonoBehaviour
         {
             wall = Instantiate(wallPrefabs[prefabIndex]);
         }
-        wall.transform.SetParent(this.transform);
         wall.transform.position = Vector3.forward * spawnZ;
         spawnZ += wallLength;
         activeWalls.Add(wall);
+        wall.transform.SetParent(this.transform);
     }
-    #endregion
 
-    #region DeleteWall
     private void DeleteWall()
     {
         Destroy(activeWalls[0]);
         activeWalls.RemoveAt(0);
     }
-    #endregion
 
-    #region RandomWallIndex
     private int RandomWallIndex()
     {
         if(wallPrefabs.Length <= 1)
@@ -91,5 +82,4 @@ public class WallManager : MonoBehaviour
         lastWallIndex = randomIndex;
         return randomIndex;
     }
-    #endregion
 }

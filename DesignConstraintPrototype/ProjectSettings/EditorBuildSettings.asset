@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/DougScene.unity
-    guid: 1e1621e34be415c40bae49ed191b6840
+  m_Scenes: []
   m_configObjects: {}

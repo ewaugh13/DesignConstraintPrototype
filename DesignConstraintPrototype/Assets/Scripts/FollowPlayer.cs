@@ -8,10 +8,12 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     [Tooltip("The GameObject to follow")]
     private GameObject FollowObject = null;
+    [SerializeField]
+    private Vector3 Offset;
     #endregion
 
     void Update()
     {
-        transform.position = FollowObject.transform.position;
+        transform.position = FollowObject.transform.position - Offset;
     }
 }

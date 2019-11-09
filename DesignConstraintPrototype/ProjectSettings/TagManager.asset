@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death UI
+  - UI
+  - LightOrb
+  - Obsticale
   layers:
   - Default
   - TransparentFX

@@ -55,7 +55,6 @@ public class RollConstantDirection : MonoBehaviour
     void Update()
     {
         this.gameObject.transform.position += (objectMovementDirection * Time.deltaTime * movementSpeed);
-        // TODO use quaternions
-        this.gameObject.transform.eulerAngles += (objectMovementRotation * Time.deltaTime * rotationSpeed);
+        this.gameObject.transform.Rotate(objectMovementRotation * Time.deltaTime * rotationSpeed);
     }
 }

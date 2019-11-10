@@ -9,11 +9,24 @@ public class FollowPlayer : MonoBehaviour
     [Tooltip("The GameObject to follow")]
     private GameObject FollowObject = null;
     [SerializeField]
-    private Vector3 Offset;
+    private Vector3 Offset = Vector3.zero;
     #endregion
+
+    #region Hidden Variables
+    private PlayerCollision playerCollision = null;
+    #endregion
+
+    private void Start()
+    {
+        playerCollision = FollowObject.GetComponent<PlayerCollision>();
+        transform.position = FollowObject.transform.position - Offset;
+    }
 
     void Update()
     {
-        transform.position = FollowObject.transform.position - Offset;
+        if (playerCollision.GetOnGround() && FollowObject != null)
+        {
+            transform.position = FollowObject.transform.position - Offset;
+        }
     }
 }

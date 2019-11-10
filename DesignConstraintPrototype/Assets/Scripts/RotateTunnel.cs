@@ -16,41 +16,36 @@ public class RotateTunnel : MonoBehaviour
     [SerializeField]
     [Tooltip("The ball object itself")]
     private GameObject ball = null;
-    [SerializeField]
-    [Tooltip("The roof of the tunnel")]
-    private GameObject roof = null;
-    [SerializeField]
-    [Tooltip("The floor of the tunnel")]
-    private GameObject floor = null;
     #endregion
 
     #region Hidden Variables
     private Vector3 rotationPoint = Vector3.zero;
     private bool isRotating = false;
+    private PlayerCollision playerCollision = null;
     #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rotationPoint = new Vector3(0.0f,
-            Mathf.Abs((roof.transform.localPosition.y - floor.transform.localPosition.y) / 2.0f),
-            0.0f);
+        playerCollision = ball.GetComponent<PlayerCollision>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isRotating)
+        if (playerCollision != null)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (!isRotating && playerCollision.CheckOnGround())
             {
-                isRotating = true;
-                StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountLeft));
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                isRotating = true;
-                StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountRight));
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    isRotating = true;
+                    StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountLeft));
+                }
+                else if (Input.GetKeyDown(KeyCode.D))
+                {
+                    isRotating = true;
+                    StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountRight));
+                }
             }
         }
     }

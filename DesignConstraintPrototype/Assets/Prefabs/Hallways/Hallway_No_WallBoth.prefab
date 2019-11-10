@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 825951226288692137}
   - component: {fileID: 3945827170396729381}
   - component: {fileID: 7865862972018411437}
-  - component: {fileID: 1031020263147841347}
+  - component: {fileID: 476553456}
   m_Layer: 0
   m_Name: Gap_1 (3)
   m_TagString: Untagged
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab4a11ce682cd924bba1e91d1992b6d9, type: 2}
+  - {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1031020263147841347
-MeshCollider:
+--- !u!65 &476553456
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,10 +89,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.00000004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6818722642965763541
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +103,7 @@ GameObject:
   - component: {fileID: 5959923408911319328}
   - component: {fileID: 3821511797157288562}
   - component: {fileID: 826456298410365201}
-  - component: {fileID: 1819390384857307509}
+  - component: {fileID: 1399081374}
   m_Layer: 0
   m_Name: Gap_1 (2)
   m_TagString: Untagged
@@ -151,7 +150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab4a11ce682cd924bba1e91d1992b6d9, type: 2}
+  - {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,8 +171,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1819390384857307509
-MeshCollider:
+--- !u!65 &1399081374
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,10 +181,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.00000004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1056878711096034695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -211,22 +209,22 @@ PrefabInstance:
     - target: {fileID: 8889525115319051572, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8889525115319051572, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8889525115319051572, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8889525115319051572, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8889525115319051572, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
@@ -263,7 +261,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3370747992619670980, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
+    - target: {fileID: 7143681113899670400, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
+    - target: {fileID: 8340235579554373182, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
+    m_RemovedComponents:
+    - {fileID: 2890993105668654251, guid: bafd3c90e79f7dc4fac219805b68e4b2, type: 3}
+    - {fileID: 727862713, guid: bafd3c90e79f7dc4fac219805b68e4b2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bafd3c90e79f7dc4fac219805b68e4b2, type: 3}
 --- !u!4 &8500305053847658675 stripped
 Transform:

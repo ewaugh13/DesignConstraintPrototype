@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class DamagePlayer : MonoBehaviour
 {
 
-    #region
+    #region Private variables
     private GameObject DeathUI;
+    private float WaitForSec = 1.5f;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        DeathUI = GameObject.FindGameObjectWithTag("Death UI");
+        DeathUI = GameObject.Find("Reset UI Canvas");
+        Debug.Log(DeathUI);
+        DeathUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,32 +28,21 @@ public class DamagePlayer : MonoBehaviour
             // Display the UI
             DeathUI.SetActive(true);
 
-            // Restart Scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
             // Delay        IDK how to make delay in the subroutine.. SND HLP PLZ
             StartCoroutine("Delay");
-
-            // Disable UI
-            DeathUI.SetActive(false);
         }
     }
 
     IEnumerator Delay()
     {
-        yield return 0;
+        yield return new WaitForSeconds(WaitForSec);
+        ResetScene();
     }
 
-    // If the player enters a trigger, the player resets
-    private void OnTriggerEnter(Collider other)
+    private void ResetScene()
     {
-        if (other.tag.Equals("Player"))
-        {
-            // Display score
-            
-
-            // Restart Scene
-            
-        }
+        //DeathUI.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }

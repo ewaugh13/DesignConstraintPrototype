@@ -3519,6 +3519,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1468348026881088090, guid: ad72782bb73b7864c802ab1bb47c6d8a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obsticale
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984478780938244098, guid: ad72782bb73b7864c802ab1bb47c6d8a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obsticale
+      objectReference: {fileID: 0}
+    - target: {fileID: 521535791598172641, guid: ad72782bb73b7864c802ab1bb47c6d8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad72782bb73b7864c802ab1bb47c6d8a, type: 3}
 --- !u!4 &393324132 stripped
@@ -12828,6 +12843,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065382714294598160, guid: 0230689ae7cf08647825dbd557ee76d6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obsticale
+      objectReference: {fileID: 0}
+    - target: {fileID: 265271547262198571, guid: 0230689ae7cf08647825dbd557ee76d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221091067297530000, guid: 0230689ae7cf08647825dbd557ee76d6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obsticale
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0230689ae7cf08647825dbd557ee76d6, type: 3}

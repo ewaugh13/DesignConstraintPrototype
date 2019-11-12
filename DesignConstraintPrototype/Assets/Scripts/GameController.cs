@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     #region GameController Variables
     static public bool isDead = false;
-    static public int score;
+    static public float score;
     #endregion
 
 

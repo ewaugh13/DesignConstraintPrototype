@@ -13,7 +13,11 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameController.score += 1;
-        Debug.Log(GameController.score);
+        if(!GameController.isDead) // only if the player is not dead
+        {
+            GameController.score += Mathf.Floor(Time.deltaTime * 100);
+            // Debug.Log(GameController.score);
+        }
+
     }
 }

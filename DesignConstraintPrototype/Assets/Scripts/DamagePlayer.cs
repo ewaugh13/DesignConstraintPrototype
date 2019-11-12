@@ -38,7 +38,7 @@ public class DamagePlayer : MonoBehaviour
         {
             // Display the UI
             Destroy(player);
-            DeathUIText.GetComponent<Text>().text = GameController.score.ToString();
+            DeathUIText.GetComponent<Text>().text = "You died! \nYour score was " + GameController.score.ToString();
             DeathUI.SetActive(true);
             // Delay        IDK how to make delay in the subroutine.. SND HLP PLZ
             StartCoroutine("Delay");

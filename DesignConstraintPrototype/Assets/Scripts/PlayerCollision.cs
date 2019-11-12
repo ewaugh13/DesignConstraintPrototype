@@ -68,8 +68,6 @@ public class PlayerCollision : MonoBehaviour
     private void KillAndRespawnPlayer()
     {
         GameController.isDead = true;
-        //Destroy(this.gameObject);
-        //SceneManager.LoadScene(sceneToLoad.name);
     }
 
     private IEnumerator WaitKillPlusRespawn(float time)

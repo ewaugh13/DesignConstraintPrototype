@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000018930457, g: 0.000000036171485, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.000017101771, g: 0.000000026137768, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 1
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 16
     m_PVRSampleCount: 256
@@ -2553,7 +2553,7 @@ GameObject:
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!54 &309002298
 Rigidbody:
@@ -4134,7 +4134,6 @@ GameObject:
   - component: {fileID: 426459512}
   - component: {fileID: 426459511}
   - component: {fileID: 426459513}
-  - component: {fileID: 426459514}
   m_Layer: 0
   m_Name: Death Detector
   m_TagString: Untagged
@@ -4185,18 +4184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SwipeLeftText: {fileID: 1628674062}
   SwipeRightText: {fileID: 1065497174}
---- !u!114 &426459514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426459510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac9684b73186604ba282721a6210b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &429229028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11796,7 +11783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1153093572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11812,7 +11799,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 3a84096851208bd48810e1e9ee9a4da3, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0
+  weight: 1
   priority: 0
 --- !u!65 &1153093573
 BoxCollider:
@@ -18263,11 +18250,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikeyBoiHallwayFloorSpikes
       objectReference: {fileID: 0}
-    - target: {fileID: 9159934657361283520, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 6565906531717448327, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18321,16 +18303,6 @@ PrefabInstance:
     - target: {fileID: 6565906531717448327, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7677231734224088242, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obsticale
-      objectReference: {fileID: 0}
-    - target: {fileID: 1507539342340552073, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6895234741985489128, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,

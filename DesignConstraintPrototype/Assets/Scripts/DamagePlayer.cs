@@ -37,7 +37,7 @@ public class DamagePlayer : MonoBehaviour
         {
             // Display the UI
             Destroy(player);
-            DeathUIText.GetComponent<Text>().text = "You died! \nYour score was " + GameController.score.ToString();
+            DeathUIText.GetComponent<Text>().text = "The Darkness consumed you! \nYour score was " + GameController.score.ToString();
             DeathUI.SetActive(true);
 
             StartCoroutine(Delay());

@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
-    #region GameController Variables
-    static public bool isDead = false;
-    static public int score;
-    #endregion
-
-
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
+        GameController.score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GameController.score += 1;
+        Debug.Log(GameController.score);
     }
 }

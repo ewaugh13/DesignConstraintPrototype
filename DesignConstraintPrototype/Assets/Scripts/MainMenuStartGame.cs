@@ -11,16 +11,21 @@ public class MainMenuStartGame : MonoBehaviour
     [SerializeField]
     public string LevelName;
 
-    [Tooltip("The text for loading info")]
+    [Tooltip("'Start' Image")]
     [SerializeField]
-    public GameObject TextInput;
+    public GameObject StartImage;
+
+    [Tooltip("'Loading' Image")]
+    [SerializeField]
+    public GameObject LoadingImage;
 
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartImage.SetActive(true);
+        LoadingImage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,9 +33,9 @@ public class MainMenuStartGame : MonoBehaviour
     {
         if (Input.touchCount > 0 || Input.anyKeyDown)
         {
-            TextInput.GetComponent<Text>().text = "Loading...";
+            StartImage.SetActive(false);
+            LoadingImage.SetActive(true);
             SceneManager.LoadScene(LevelName);
-        }
-            
+        }    
     }
 }

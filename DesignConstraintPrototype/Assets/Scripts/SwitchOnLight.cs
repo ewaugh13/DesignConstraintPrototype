@@ -9,22 +9,12 @@ public class SwitchOnLight : MonoBehaviour
     //public GameObject collisionObject;
     #endregion
 
-    #region OnCollisionEnter
-    private void OnCollisionEnter(Collision collision)
+    #region Triggers
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag.Equals("HallwayLight"))
+        if (other.gameObject.tag.Equals("LightCuller"))
         {
-            collision.gameObject.GetComponent<Light>().enabled = true;
-        }
-    }
-    #endregion
-
-    #region OnCollisionExit
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag.Equals("HallwayLight"))
-        {
-            collision.gameObject.GetComponent<Light>().enabled = false;
+            this.gameObject.GetComponent<Light>().enabled = !this.gameObject.GetComponent<Light>().enabled;
         }
     }
     #endregion

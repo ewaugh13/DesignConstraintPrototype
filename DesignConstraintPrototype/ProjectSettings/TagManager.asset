@@ -9,6 +9,8 @@ TagManager:
   - LightOrb
   - Obsticale
   - Pit
+  - HallwayLight
+  - LightCuller
   layers:
   - Default
   - TransparentFX

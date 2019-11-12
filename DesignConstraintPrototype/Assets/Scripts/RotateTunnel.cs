@@ -32,22 +32,39 @@ public class RotateTunnel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerCollision != null)
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if (!isRotating && playerCollision.CheckOnGround())
-            {
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    isRotating = true;
-                    StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountLeft));
-                }
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    isRotating = true;
-                    StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountRight));
-                }
-            }
+            RotateLeft();
         }
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            RotateRight();
+        }
+    }
+
+    public void RotateLeft()
+    {
+        if (CanRotate())
+        {
+            isRotating = true;
+            StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountLeft));
+        }
+    }
+
+    public void RotateRight()
+    {
+        if (CanRotate())
+        {
+            isRotating = true;
+            StartCoroutine(RotateTunnelOverTime(timeToRotate, rotationAmountRight));
+        }
+    }
+
+    private bool CanRotate()
+    {
+        if (playerCollision != null && !isRotating && playerCollision.CheckOnGround())
+            return true;
+        return false;
     }
 
     private IEnumerator RotateTunnelOverTime(float timeToRotate, float rotateAmount)

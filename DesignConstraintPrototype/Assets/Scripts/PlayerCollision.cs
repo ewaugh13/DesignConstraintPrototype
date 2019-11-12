@@ -13,8 +13,6 @@ public class PlayerCollision : MonoBehaviour
 
     #region Hidden Variables
     private Scene sceneToLoad;
-    private GameObject ResetUICanvas;
-    private Component UICanvas;
     private bool onGround;
     #endregion
 
@@ -25,7 +23,6 @@ public class PlayerCollision : MonoBehaviour
     private void Start()
     {
         sceneToLoad = SceneManager.GetActiveScene();
-        ResetUICanvas = GameObject.Find("Reset UI Canvas");
         GameController.isDead = false;
     }
 
@@ -44,7 +41,6 @@ public class PlayerCollision : MonoBehaviour
             KillAndRespawnPlayer();
         }
     }
-
 
     private void OnCollisionExit(Collision collision)
     {

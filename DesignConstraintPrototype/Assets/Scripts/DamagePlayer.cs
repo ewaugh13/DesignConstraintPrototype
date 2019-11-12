@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 public class DamagePlayer : MonoBehaviour
 {
 
-    #region Private variables
-    private GameObject DeathUI;
+    #region Instance variables
+    [SerializeField]
+    [Tooltip("The death UI")]
+    private GameObject DeathUI = null;
+    #endregion
+
+    #region Hidden Variables
     private float WaitForSec = 1.5f;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        DeathUI = GameObject.Find("Reset UI Canvas");
-        Debug.Log(DeathUI);
         DeathUI.SetActive(false);
     }
 
@@ -28,8 +31,7 @@ public class DamagePlayer : MonoBehaviour
             // Display the UI
             DeathUI.SetActive(true);
 
-            // Delay        IDK how to make delay in the subroutine.. SND HLP PLZ
-            StartCoroutine("Delay");
+            StartCoroutine(Delay());
         }
     }
 

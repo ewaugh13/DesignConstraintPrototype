@@ -4138,6 +4138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59c1bcd0af6c3d438607f4f73dcd5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathUI: {fileID: 1132246659}
+  DeathUIText: {fileID: 1374723768}
+  player: {fileID: 309002297}
 --- !u!4 &426459512
 Transform:
   m_ObjectHideFlags: 0
@@ -4164,6 +4167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575df686fc130ef43b9b54b6f615be05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwipeLeftText: {fileID: 1628674062}
+  SwipeRightText: {fileID: 1065497174}
 --- !u!1001 &429229028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18268,6 +18273,11 @@ PrefabInstance:
     - target: {fileID: 6565906531717448327, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895234741985489128, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

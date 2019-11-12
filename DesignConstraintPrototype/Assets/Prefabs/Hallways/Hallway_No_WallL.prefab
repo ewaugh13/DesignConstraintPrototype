@@ -222,5 +222,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6066536590415350544, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253867348516043054, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616746902944591476, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310264149157894103, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755405919383046828, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd7cc30095e58549abec7087a213bf5, type: 3}

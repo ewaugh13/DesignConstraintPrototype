@@ -294,12 +294,77 @@ PrefabInstance:
     - target: {fileID: 503820314669348242, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6314365490557371601, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 110716889605875851, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 134634411444898582, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736283742333716282, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453421998296869498, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647893947843328137, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706293929474773242, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196674503677876898, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774368410856096880, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657246546939968979, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640283963279335592, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712844876067954964, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 800771232788075306, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098631880065166975, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2890993105668654251, guid: bafd3c90e79f7dc4fac219805b68e4b2, type: 3}

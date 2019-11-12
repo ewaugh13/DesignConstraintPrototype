@@ -67,5 +67,7 @@ public class RotateTunnel : MonoBehaviour
         }
         isRotating = false;
         ball.GetComponent<Rigidbody>().isKinematic = false;
+
+        playerCollision.CheckForPitDeath();
     }
 }

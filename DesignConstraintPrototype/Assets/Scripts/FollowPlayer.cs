@@ -24,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        if (playerCollision.GetOnGround() && FollowObject != null)
+        if (GameController.onGround && FollowObject != null)
         {
             transform.position = FollowObject.transform.position - Offset;
         }

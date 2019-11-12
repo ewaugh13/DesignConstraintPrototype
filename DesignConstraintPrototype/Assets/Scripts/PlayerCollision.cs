@@ -13,30 +13,18 @@ public class PlayerCollision : MonoBehaviour
 
     #region Hidden Variables
     private Scene sceneToLoad;
-    private bool onGround;
-    #endregion
-
-    #region Getters and Setters
-    public bool GetOnGround() { return this.onGround; }
     #endregion
 
     private void Start()
     {
         sceneToLoad = SceneManager.GetActiveScene();
         GameController.isDead = false;
+        GameController.onGround = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag.Equals("Obsticale"))
-        {
-            KillAndRespawnPlayer();
-        }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag.Equals("Obsticale"))
         {
             KillAndRespawnPlayer();
         }
@@ -49,8 +37,12 @@ public class PlayerCollision : MonoBehaviour
             KillAndRespawnPlayer();
         }
 
-        onGround = CheckOnGround();
-        if(!onGround)
+        CheckForPitDeath();
+    }
+
+    public void CheckForPitDeath()
+    {
+        if (!CheckOnGround())
         {
             StartCoroutine(WaitKillPlusRespawn(respawnTime));
         }
@@ -58,20 +50,26 @@ public class PlayerCollision : MonoBehaviour
 
     public bool CheckOnGround()
     {
-        return Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.0f);
+        Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.0f);
+        GameController.onGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hitInfo, 1.0f);
+        if (hitInfo.collider != null && hitInfo.collider.gameObject.tag.Equals("Pit"))
+        {
+            GameController.onGround = false;
+        }
+        return GameController.onGround;
     }
 
     private void KillAndRespawnPlayer()
     {
         GameController.isDead = true;
-        //Destroy(this.gameObject);
-        //SceneManager.LoadScene(sceneToLoad.name);
     }
 
     private IEnumerator WaitKillPlusRespawn(float time)
     {
         yield return new WaitForSeconds(time);
-
-        KillAndRespawnPlayer();
+        if (!CheckOnGround())
+        {
+            KillAndRespawnPlayer();
+        }
     }
 }

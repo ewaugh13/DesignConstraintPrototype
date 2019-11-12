@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DamagePlayer : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class DamagePlayer : MonoBehaviour
     [SerializeField]
     [Tooltip("The death UI")]
     private GameObject DeathUI = null;
+    [Tooltip("Death UI text")]
+    [SerializeField]
+    private GameObject DeathUIText;
+    [Tooltip("Player object")]
+    [SerializeField]
+    private GameObject player;
     #endregion
 
     #region Hidden Variables
@@ -26,9 +33,11 @@ public class DamagePlayer : MonoBehaviour
     void Update()
     {
         // just a pseudo code of what needs to be done. Fell free to move this code where the game manages death condition
-        if (GameController.isDead) // just a bool var in gameController that will be set for the death condition
+        if (GameController.isDead && player != null) // just a bool var in gameController that will be set for the death condition
         {
             // Display the UI
+            Destroy(player);
+            DeathUIText.GetComponent<Text>().text = "You died! \nYour score was " + GameController.score.ToString();
             DeathUI.SetActive(true);
 
             StartCoroutine(Delay());

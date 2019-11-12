@@ -19,7 +19,7 @@ public class StopTouchingMyCheese : MonoBehaviour
 
     void Update()
     {
-
+        if (FollowObject != null)
             transform.position = FollowObject.transform.position - Offset;
         
     }

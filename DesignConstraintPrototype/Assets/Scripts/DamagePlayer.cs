@@ -7,14 +7,18 @@ public class DamagePlayer : MonoBehaviour
 {
 
     #region Private variables
-    private GameObject DeathUI;
     private float WaitForSec = 1.5f;
+    #endregion
+
+    #region Publiuc variables
+    [Tooltip("The death UI canvas")]
+    [SerializeField]
+    public GameObject DeathUI;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        DeathUI = GameObject.Find("Reset UI Canvas");
         Debug.Log(DeathUI);
         DeathUI.SetActive(false);
     }

@@ -9,21 +9,27 @@ public class SwipeInputs : MonoBehaviour
     private Vector3 LastTouchPoint;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
 
-    private GameObject SwipeRightText;
-    private GameObject SwipeLeftText;
+
     #endregion
 
 
     #region Public Variables
+    [Tooltip("The left sweipe detection text")]
+    [SerializeField]
+    public GameObject SwipeLeftText;
+
+    [Tooltip("The right swipe detection text")]
+    [SerializeField]
+    public GameObject SwipeRightText;
 
     #endregion
 
     void Start()
     {
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
-        SwipeLeftText = GameObject.Find("Swipe Left");
+
         Debug.Log(SwipeLeftText);
-        SwipeRightText = GameObject.Find("Swipe Right");
+
         Debug.Log(SwipeRightText);
         SwipeLeftText.SetActive(false);
         SwipeRightText.SetActive(false);

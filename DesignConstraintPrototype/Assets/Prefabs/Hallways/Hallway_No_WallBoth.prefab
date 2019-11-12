@@ -270,7 +270,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a19814dc3898ec64ab697f70e77eba0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98497a453a9247d41b3d702411168b05, type: 2}
     - target: {fileID: 8340235579554373182, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -346,6 +346,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Pit
       objectReference: {fileID: 0}
+    - target: {fileID: 1712760950833415822, guid: bafd3c90e79f7dc4fac219805b68e4b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98497a453a9247d41b3d702411168b05, type: 2}
     - target: {fileID: 8640283963279335592, guid: bafd3c90e79f7dc4fac219805b68e4b2,
         type: 3}
       propertyPath: m_TagString

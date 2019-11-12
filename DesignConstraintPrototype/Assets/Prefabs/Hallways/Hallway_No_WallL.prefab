@@ -242,10 +242,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Pit
       objectReference: {fileID: 0}
+    - target: {fileID: 1001846699786551850, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98497a453a9247d41b3d702411168b05, type: 2}
+    - target: {fileID: 3892497976854891303, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98497a453a9247d41b3d702411168b05, type: 2}
     - target: {fileID: 3755405919383046828, guid: cdd7cc30095e58549abec7087a213bf5,
         type: 3}
       propertyPath: m_TagString
       value: Pit
       objectReference: {fileID: 0}
+    - target: {fileID: 4819811835888981545, guid: cdd7cc30095e58549abec7087a213bf5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98497a453a9247d41b3d702411168b05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd7cc30095e58549abec7087a213bf5, type: 3}

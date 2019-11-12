@@ -5,81 +5,101 @@ using UnityEngine;
 public class WallManager : MonoBehaviour
 {
     #region MemberVariables
-    public GameObject[] wallPrefabs;
-    private Transform playerTransform;
-    private float spawnZ = 0.0f;
-    private float wallLength = 2.0f;
-    private int wallsOnScreen = 10;
-    private List<GameObject> activeWalls;
-    private float safeZone = 4;
+    // Tunnel Prefabs
+    [SerializeField]
+    private GameObject[] earlyTunnelPrefabs;
+    [SerializeField]
+    private GameObject[] midTunnelPrefabs;
+    [SerializeField]
+    private GameObject[] lateTunnelPrefabs;
 
-    private int lastWallIndex = 0;
+    // Location to Generate
+    [SerializeField]
+    private Transform playerTransform;
+    private float tunnelSpawnLocationZ = 0.0f;
+
+    // Tunnel Details
+    [SerializeField]
+    private float tunnelLength = 60.0f;
+    //private int tunnelsOnScreen = 2;
+
+    // Keep Track of Active Tunnels
+    private List<GameObject> activeTunnels;
+    private int lastTunnelIndex = 0;
+    private int numberOfTunnelsGenerated;
     #endregion
 
+    #region Start
     void Start()
     {
-        activeWalls = new List<GameObject>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        // Holds the tunnel objects on the screen
+        activeTunnels = new List<GameObject>();
+        SpawnTunnel(earlyTunnelPrefabs);
+    }
+    #endregion
 
-        for(int i = 0; i < wallsOnScreen; i++)
+    #region Update
+    void Update()
+    {
+        // Spawning Tunnels
+        if(playerTransform.position.z > (tunnelSpawnLocationZ - (tunnelLength / 2)))
         {
-            if (i < 4)
+            if(numberOfTunnelsGenerated < 3)
             {
-                SpawnWall(0);
+                SpawnTunnel(midTunnelPrefabs);
             }
             else
             {
-                SpawnWall();
+                SpawnTunnel(lateTunnelPrefabs);
             }
         }
-    }
 
-    void Update()
-    {
-        if((playerTransform.position.z - safeZone) > (spawnZ - (wallsOnScreen * wallLength)))
+        // Deleting Tunnels
+        if(activeTunnels.Count > 2)
         {
-            SpawnWall();
-            DeleteWall();
+            DeleteTunnel();
         }
     }
+    #endregion
 
-    private void SpawnWall(int prefabIndex = -1)
+    #region SpawnTunnel
+    private void SpawnTunnel(GameObject[] tunnelPrefabs)
     {
-        GameObject wall;
-        if (prefabIndex == -1)
-        {
-            wall = Instantiate(wallPrefabs[RandomWallIndex()]) as GameObject;
-        }
-        else
-        {
-            wall = Instantiate(wallPrefabs[prefabIndex]);
-        }
-        wall.transform.position = Vector3.forward * spawnZ;
-        spawnZ += wallLength;
-        activeWalls.Add(wall);
-        wall.transform.SetParent(this.transform);
+        GameObject tunnel;
+        tunnel = Instantiate(tunnelPrefabs[RandomTunnelIndex(tunnelPrefabs)]) as GameObject;
+        tunnel.transform.position = Vector3.forward * tunnelSpawnLocationZ;
+        tunnelSpawnLocationZ += tunnelLength;
+        numberOfTunnelsGenerated++;
+        activeTunnels.Add(tunnel);
+        tunnel.transform.SetParent(this.transform);
     }
+    #endregion
 
-    private void DeleteWall()
+    #region DeleteTunnel
+    private void DeleteTunnel()
     {
-        Destroy(activeWalls[0]);
-        activeWalls.RemoveAt(0);
+        Destroy(activeTunnels[0]);
+        activeTunnels.RemoveAt(0);
     }
+    #endregion
 
-    private int RandomWallIndex()
+    #region RandomTunnelIndex
+    // Random Index Generator
+    private int RandomTunnelIndex(GameObject[] tunnelPrefabs)
     {
-        if(wallPrefabs.Length <= 1)
+        if(tunnelPrefabs.Length <= 1)
         {
             return 0;
         }
 
-        int randomIndex = lastWallIndex;
-        while(randomIndex == lastWallIndex)
+        int randomIndex = lastTunnelIndex;
+        while(randomIndex == lastTunnelIndex)
         {
-            randomIndex = Random.Range(0, wallPrefabs.Length);
+            randomIndex = Random.Range(0, tunnelPrefabs.Length);
         }
 
-        lastWallIndex = randomIndex;
+        lastTunnelIndex = randomIndex;
         return randomIndex;
     }
+    #endregion
 }

@@ -610,8 +610,6 @@ MonoBehaviour:
   rotationAmountRight: -90
   timeToRotate: 1
   ball: {fileID: 309002297}
-  roof: {fileID: 1912377707753965551, guid: 0cf32cadf3145e548929a8b923837ff3, type: 3}
-  floor: {fileID: 5928935552021318744, guid: 6d70cd1fa3ee68d4e8230a72bc28f92f, type: 3}
 --- !u!1 &1530925479
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,8 +763,6 @@ MonoBehaviour:
   rotationAmountRight: -90
   timeToRotate: 1
   ball: {fileID: 309002297}
-  roof: {fileID: 0}
-  floor: {fileID: 0}
 --- !u!114 &2006835781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +776,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefabs:
-  - {fileID: 1912377707753965551, guid: 0cf32cadf3145e548929a8b923837ff3, type: 3}
-  - {fileID: 1912377707753965551, guid: 0c60452e53e21bd479351d56de06cd56, type: 3}
-  - {fileID: 1912377707753965551, guid: c51448c48fca11b4f8f7ea6196a2d255, type: 3}
-  - {fileID: 5928935552021318744, guid: 6d70cd1fa3ee68d4e8230a72bc28f92f, type: 3}
+  - {fileID: 7838978095145092520, guid: ad72782bb73b7864c802ab1bb47c6d8a, type: 3}
+  - {fileID: 2002015899826690161, guid: d95e27894063ede478389666e1a215c9, type: 3}
+  - {fileID: 2248152321374907842, guid: 4bd479570b7333d4b9ff239cf5550c45, type: 3}
+  - {fileID: 6303307538737477078, guid: 17d38889e4a81bc498fe1c482262faaa, type: 3}
+  - {fileID: 2184555960006380614, guid: 24a6bb28f5d10134aad816163a31753a, type: 3}
+  - {fileID: 5908669591663475798, guid: 9e7396ea2f0110149aeef45169a2ffc2, type: 3}
+  - {fileID: 7519626063513231202, guid: 0230689ae7cf08647825dbd557ee76d6, type: 3}
+  - {fileID: 9159934657361283520, guid: e0e6c7fcf24ad3d4d8c195764b8e598e, type: 3}
+  - {fileID: 754947297100775124, guid: cdd7cc30095e58549abec7087a213bf5, type: 3}
+  - {fileID: 5205427264293705974, guid: 033b3d364ae8af24c9d1da56d8a1829b, type: 3}
+  - {fileID: 5906276646094941172, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95, type: 3}
+  - {fileID: 4429941044966598486, guid: e832644c248605f46a34a17b0f77e75e, type: 3}
+  - {fileID: 6871796798011338355, guid: bafd3c90e79f7dc4fac219805b68e4b2, type: 3}
+  - {fileID: 117889190583301003, guid: 1555e925b02223c4482107a8b17be85b, type: 3}

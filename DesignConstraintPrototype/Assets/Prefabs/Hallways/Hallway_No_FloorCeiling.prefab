@@ -378,6 +378,26 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1532219981179771618, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753884538286439413, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653452147477127490, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416477610299425110, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5479218961243883277, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95, type: 3}
     - {fileID: 8859589279822181897, guid: d99b52c9ba3fd9d49a42fbb9c7c68d95, type: 3}

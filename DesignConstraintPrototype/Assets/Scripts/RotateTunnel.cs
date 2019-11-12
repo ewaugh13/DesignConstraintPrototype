@@ -69,22 +69,26 @@ public class RotateTunnel : MonoBehaviour
 
     private IEnumerator RotateTunnelOverTime(float timeToRotate, float rotateAmount)
     {
-        float currentRotation = this.gameObject.transform.eulerAngles.z;
-        float targetRotation = currentRotation + rotateAmount;
-
-        float elapsedTime = 0;
-        ball.GetComponent<Rigidbody>().isKinematic = true;
-        while (elapsedTime < timeToRotate)
+        if(ball != null)
         {
-            elapsedTime += Time.deltaTime;
-            float zRotationAmount = Mathf.Lerp(currentRotation, targetRotation, elapsedTime / timeToRotate);
-            this.gameObject.transform.RotateAround(rotationPoint, Vector3.forward, zRotationAmount - this.gameObject.transform.eulerAngles.z);
+            float currentRotation = this.gameObject.transform.eulerAngles.z;
+            float targetRotation = currentRotation + rotateAmount;
 
-            yield return null;
+            float elapsedTime = 0;
+            ball.GetComponent<Rigidbody>().isKinematic = true;
+            while (elapsedTime < timeToRotate)
+            {
+                elapsedTime += Time.deltaTime;
+                float zRotationAmount = Mathf.Lerp(currentRotation, targetRotation, elapsedTime / timeToRotate);
+                this.gameObject.transform.RotateAround(rotationPoint, Vector3.forward, zRotationAmount - this.gameObject.transform.eulerAngles.z);
+
+                yield return null;
+            }
+            isRotating = false;
+            ball.GetComponent<Rigidbody>().isKinematic = false;
+
+            playerCollision.CheckForPitDeath();
         }
-        isRotating = false;
-        ball.GetComponent<Rigidbody>().isKinematic = false;
-
-        playerCollision.CheckForPitDeath();
+     
     }
 }

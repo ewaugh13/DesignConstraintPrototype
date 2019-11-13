@@ -50,9 +50,17 @@ public class PlayerCollision : MonoBehaviour
 
     public bool CheckOnGround()
     {
-        Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.0f);
-        GameController.onGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hitInfo, 1.0f);
-        if (hitInfo.collider != null && hitInfo.collider.gameObject.tag.Equals("Pit"))
+        if (this.gameObject != null)
+        {
+            Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.0f);
+            GameController.onGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hitInfo, 1.0f);
+            if (hitInfo.collider != null && hitInfo.collider.gameObject.tag.Equals("Pit"))
+            {
+                GameController.onGround = false;
+            }
+            return GameController.onGround;
+        }
+        else
         {
             GameController.onGround = false;
         }

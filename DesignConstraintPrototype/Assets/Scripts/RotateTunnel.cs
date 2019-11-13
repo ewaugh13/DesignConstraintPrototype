@@ -75,7 +75,8 @@ public class RotateTunnel : MonoBehaviour
             float targetRotation = currentRotation + rotateAmount;
 
             float elapsedTime = 0;
-            ball.GetComponent<Rigidbody>().isKinematic = true;
+            if(ball != null)
+                ball.GetComponent<Rigidbody>().isKinematic = true;
             while (elapsedTime < timeToRotate)
             {
                 elapsedTime += Time.deltaTime;
@@ -85,7 +86,8 @@ public class RotateTunnel : MonoBehaviour
                 yield return null;
             }
             isRotating = false;
-            ball.GetComponent<Rigidbody>().isKinematic = false;
+            if(ball != null)
+                ball.GetComponent<Rigidbody>().isKinematic = false;
 
             playerCollision.CheckForPitDeath();
         }

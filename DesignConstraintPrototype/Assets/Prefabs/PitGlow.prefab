@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4063877614764859683}
   m_Layer: 0
   m_Name: Quad (2)
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 772716539825340358}
   m_Layer: 0
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1407708295494510689}
   m_Layer: 0
   m_Name: Quad (1)
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 5890282261929941609}
   m_Layer: 0
   m_Name: PitBottom
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 1460607228626920000}
   m_Layer: 0
   m_Name: Quad (3)
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

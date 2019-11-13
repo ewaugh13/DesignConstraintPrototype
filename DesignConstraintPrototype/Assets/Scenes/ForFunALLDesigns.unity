@@ -3980,12 +3980,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426459510}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 575df686fc130ef43b9b54b6f615be05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateTunnels: []
+  rotateTunnels:
+  - {fileID: 1152172396}
+  - {fileID: 47215550}
+  - {fileID: 877310145}
+  - {fileID: 273080116}
+  - {fileID: 2096620609}
+  - {fileID: 1678733811}
+  - {fileID: 809544746}
+  - {fileID: 2006835780}
+  - {fileID: 1438244358}
+  - {fileID: 1478945064}
+  - {fileID: 539168979}
+  - {fileID: 1419732614}
+  - {fileID: 1985504976}
+  - {fileID: 1871396279}
+  - {fileID: 426179222}
+  - {fileID: 2133391219}
+  - {fileID: 494901799}
 --- !u!114 &426459514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17646,11 +17663,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6895234741985489128, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7284724014963806543, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
         type: 3}
       propertyPath: m_Enabled
@@ -17676,6 +17688,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 45b61a1990ef4e445a6f606eb663e2be, type: 2}
+    - target: {fileID: 6895234741985489128, guid: e0e6c7fcf24ad3d4d8c195764b8e598e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e6c7fcf24ad3d4d8c195764b8e598e, type: 3}
 --- !u!1001 &1820670737

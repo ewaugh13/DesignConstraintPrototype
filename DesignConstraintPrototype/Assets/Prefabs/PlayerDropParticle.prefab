@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1073462505190089439}
   - component: {fileID: 1854665675}
   m_Layer: 0
-  m_Name: ParticleBoi
+  m_Name: PlayerDropParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3733,8 +3733,8 @@ ParticleSystem:
     radiusScale: 0.05
     collidesWith:
       serializedVersion: 2
-      m_Bits: 55
-    maxCollisionShapes: 64
+      m_Bits: 1
+    maxCollisionShapes: 120
     quality: 0
     voxelSize: 0.5
     collisionMessages: 0

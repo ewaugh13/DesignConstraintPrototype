@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fb7c800f466bad4898443ea69b17af8, type: 2}
+  - {fileID: 2100000, guid: 75d7f85b02cfe184daffc6414d0b0c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,7 +151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fb7c800f466bad4898443ea69b17af8, type: 2}
+  - {fileID: 2100000, guid: 75d7f85b02cfe184daffc6414d0b0c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -399,7 +399,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fb7c800f466bad4898443ea69b17af8, type: 2}
+  - {fileID: 2100000, guid: 75d7f85b02cfe184daffc6414d0b0c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -585,7 +585,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fb7c800f466bad4898443ea69b17af8, type: 2}
+  - {fileID: 2100000, guid: 75d7f85b02cfe184daffc6414d0b0c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -627,11 +627,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7692556311394166161}
     m_Modifications:
-    - target: {fileID: 8793483726371364232, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9,
-        type: 3}
-      propertyPath: m_Name
-      value: PitParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 5356292748820078432, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -640,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 5356292748820078432, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 5356292748820078432, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9,
         type: 3}
@@ -696,6 +691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793483726371364232, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9,
+        type: 3}
+      propertyPath: m_Name
+      value: PitParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 984d8273bfe031d4bb2b4f3ec0c2daf9, type: 3}

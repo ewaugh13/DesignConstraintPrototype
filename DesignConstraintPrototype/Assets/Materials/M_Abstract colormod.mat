@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Abstract_Temp_Triplanar
+  m_Name: M_Abstract colormod
   m_Shader: {fileID: -6465566751694194690, guid: e01e860f11e32254eb7cc937405e1c64,
     type: 3}
   m_ShaderKeywords: 

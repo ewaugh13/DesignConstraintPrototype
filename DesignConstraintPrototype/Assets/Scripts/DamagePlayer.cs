@@ -10,13 +10,16 @@ public class DamagePlayer : MonoBehaviour
     #region Instance variables
     [SerializeField]
     [Tooltip("The death UI")]
-    private GameObject DeathUI = null;
+    public GameObject DeathUI = null;
     [Tooltip("Death UI text")]
     [SerializeField]
-    private GameObject DeathUIText;
+    public GameObject DeathUIText;
     [Tooltip("Player object")]
     [SerializeField]
-    private GameObject player;
+    public GameObject player;
+    [Tooltip("Death message")]
+    [SerializeField]
+    public string DeathMsg;
     #endregion
 
     #region Hidden Variables
@@ -35,9 +38,13 @@ public class DamagePlayer : MonoBehaviour
         // just a pseudo code of what needs to be done. Fell free to move this code where the game manages death condition
         if (GameController.isDead && player != null) // just a bool var in gameController that will be set for the death condition
         {
-            // Display the UI
-            Destroy(player);
-            DeathUIText.GetComponent<Text>().text = "The Darkness consumed you! \nYour score was " + GameController.score.ToString();
+            Destroy(player); // destroy the ball so the camera does not move forward
+            GameController.deaths += 1; // increase death counter for the DLC screen
+            if (GameController.deaths % 5 == 0) // Every 5 deaths, display DLC if not, display death screen
+            {
+
+            }
+            DeathUIText.GetComponent<Text>().text = DeathMsg + GameController.score.ToString();
             DeathUI.SetActive(true);
 
             StartCoroutine(Delay());

@@ -3969,7 +3969,8 @@ MonoBehaviour:
   DeathUI: {fileID: 1132246659}
   DeathUIText: {fileID: 1374723768}
   player: {fileID: 100553561}
-  DeathMsg: 'Beware of the light \n Your score '
+  DeathMsg: 'Beware of the light Your score '
+  dlcScene: DLC scene
 --- !u!4 &426459512
 Transform:
   m_ObjectHideFlags: 0

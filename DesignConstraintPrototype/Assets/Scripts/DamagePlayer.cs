@@ -10,16 +10,19 @@ public class DamagePlayer : MonoBehaviour
     #region Instance variables
     [SerializeField]
     [Tooltip("The death UI")]
-    public GameObject DeathUI = null;
+    private GameObject DeathUI = null;
     [Tooltip("Death UI text")]
     [SerializeField]
-    public GameObject DeathUIText;
+    private GameObject DeathUIText;
     [Tooltip("Player object")]
     [SerializeField]
-    public GameObject player;
+    private GameObject player;
     [Tooltip("Death message")]
     [SerializeField]
-    public string DeathMsg;
+    private string DeathMsg;
+    [Tooltip("DLC scene to open")]
+    [SerializeField]
+    private string dlcScene;
     #endregion
 
     #region Hidden Variables
@@ -40,10 +43,7 @@ public class DamagePlayer : MonoBehaviour
         {
             Destroy(player); // destroy the ball so the camera does not move forward
             GameController.deaths += 1; // increase death counter for the DLC screen
-            if (GameController.deaths % 5 == 0) // Every 5 deaths, display DLC if not, display death screen
-            {
 
-            }
             DeathUIText.GetComponent<Text>().text = DeathMsg + GameController.score.ToString();
             DeathUI.SetActive(true);
 
@@ -54,7 +54,10 @@ public class DamagePlayer : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(WaitForSec);
-        ResetScene();
+        if (GameController.deaths % 5 == 0) // Every 5 deaths, display DLC if not, display death screen
+            SceneManager.LoadScene(dlcScene);
+        else 
+            ResetScene();
     }
 
     private void ResetScene()

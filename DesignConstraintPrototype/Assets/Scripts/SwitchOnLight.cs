@@ -14,7 +14,17 @@ public class SwitchOnLight : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("LightCuller"))
         {
-            this.gameObject.GetComponent<Light>().enabled = !this.gameObject.GetComponent<Light>().enabled;
+            if (this.gameObject.GetComponent<Light>() != null)
+            {
+                this.gameObject.GetComponent<Light>().enabled = !this.gameObject.GetComponent<Light>().enabled;
+            }
+            else if (this.GetComponent<ParticleSystem>() != null)
+            {
+                Debug.Log("Particle Hit");
+                var particle = this.GetComponent<ParticleSystem>();
+                particle.Play();
+
+            }
         }
     }
     #endregion

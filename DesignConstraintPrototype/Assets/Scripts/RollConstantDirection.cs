@@ -17,6 +17,8 @@ public class RollConstantDirection : MonoBehaviour
     [Tooltip("Rotation speed of ball")]
     [SerializeField]
     private float rotationSpeed = 10.0f;
+    [SerializeField]
+    private bool isDLCScreen = false;
     #endregion
 
     #region Hidden Variables
@@ -54,9 +56,13 @@ public class RollConstantDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.onGround)
+        if (GameController.onGround && isDLCScreen == false)
         {
             this.gameObject.transform.position += (objectMovementDirection * Time.deltaTime * movementSpeed);
+            this.gameObject.transform.Rotate(objectMovementRotation * Time.deltaTime * rotationSpeed);
+        }
+        else if(isDLCScreen == true)
+        {
             this.gameObject.transform.Rotate(objectMovementRotation * Time.deltaTime * rotationSpeed);
         }
     }

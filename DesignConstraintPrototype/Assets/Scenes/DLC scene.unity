@@ -339,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7154213
       objectReference: {fileID: 0}
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
@@ -349,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.69869334
       objectReference: {fileID: 0}
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
@@ -364,7 +364,7 @@ PrefabInstance:
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -91.355
       objectReference: {fileID: 0}
     - target: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
         type: 3}
@@ -723,9 +723,31 @@ MonoBehaviour:
   sceneToOpen: ForFunALLDesigns
   dlcImage: {fileID: 1362621084}
   LoadiingImage: {fileID: 472210303}
+--- !u!1 &2019365708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3572067891046653968, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
+    type: 3}
+  m_PrefabInstance: {fileID: 247796816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2019365714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 561209472970445315, guid: 2cc63d23f8a0fae4498f2c1c7721303d,
     type: 3}
   m_PrefabInstance: {fileID: 247796816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019365715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019365708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af348b023204be042be30d2ed26256ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  movementSpeed: 2
+  rotationSpeed: 10
+  isDLCScreen: 1

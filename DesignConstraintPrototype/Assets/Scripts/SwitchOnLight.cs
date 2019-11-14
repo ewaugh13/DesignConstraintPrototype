@@ -20,7 +20,6 @@ public class SwitchOnLight : MonoBehaviour
             }
             else if (this.GetComponent<ParticleSystem>() != null)
             {
-                Debug.Log("Particle Hit");
                 var particle = this.GetComponent<ParticleSystem>();
                 particle.Play();
 

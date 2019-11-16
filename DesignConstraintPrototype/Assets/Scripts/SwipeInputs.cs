@@ -18,7 +18,7 @@ public class SwipeInputs : MonoBehaviour
 
     void Start()
     {
-        dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
+        dragDistance = Screen.height * 7.5f / 100; //dragDistance is 7.5% height of the screen
         Debug.developerConsoleVisible = true;
     }
 

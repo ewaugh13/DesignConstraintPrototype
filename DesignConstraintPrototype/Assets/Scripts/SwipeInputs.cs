@@ -7,7 +7,7 @@ public class SwipeInputs : MonoBehaviour
     #region Instance Variables
     [SerializeField]
     [Tooltip("The Rotate Tunnel Component")]
-    private RotateTunnel[] rotateTunnels;
+    private RotateTunnel[] rotateTunnels = null;
     #endregion
 
     #region Hidden Variables

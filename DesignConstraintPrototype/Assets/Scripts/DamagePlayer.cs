@@ -13,16 +13,16 @@ public class DamagePlayer : MonoBehaviour
     private GameObject DeathUI = null;
     [Tooltip("Death UI text")]
     [SerializeField]
-    private GameObject DeathUIText;
+    private GameObject DeathUIText = null;
     [Tooltip("Player object")]
     [SerializeField]
-    private GameObject player;
+    private GameObject player = null;
     [Tooltip("Death message")]
     [SerializeField]
-    private string DeathMsg;
+    private string DeathMsg = "";
     [Tooltip("DLC scene to open")]
     [SerializeField]
-    private string dlcScene;
+    private string dlcScene = "";
     #endregion
 
     #region Hidden Variables

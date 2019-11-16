@@ -8,13 +8,13 @@ public class DLCScreen : MonoBehaviour
     #region MemberVariable
     [Tooltip("Scene to open on touch")]
     [SerializeField]
-    private string sceneToOpen;
+    private string sceneToOpen = "";
     [Tooltip("DLC image")]
     [SerializeField]
-    private GameObject dlcImage;
+    private GameObject dlcImage = null;
     [Tooltip("Loading image")]
     [SerializeField]
-    private GameObject LoadiingImage;
+    private GameObject LoadiingImage = null;
     #endregion
 
 

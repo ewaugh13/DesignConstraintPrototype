@@ -7,15 +7,15 @@ public class WallManager : MonoBehaviour
     #region MemberVariables
     // Tunnel Prefabs
     [SerializeField]
-    private GameObject[] earlyTunnelPrefabs;
+    private GameObject[] earlyTunnelPrefabs = null;
     [SerializeField]
-    private GameObject[] midTunnelPrefabs;
+    private GameObject[] midTunnelPrefabs = null;
     [SerializeField]
-    private GameObject[] lateTunnelPrefabs;
+    private GameObject[] lateTunnelPrefabs = null;
 
     // Location to Generate
     [SerializeField]
-    private Transform playerTransform;
+    private Transform playerTransform = null;
     private float tunnelSpawnLocationZ = 0.0f;
 
     // Tunnel Details
@@ -24,9 +24,9 @@ public class WallManager : MonoBehaviour
     //private int tunnelsOnScreen = 2;
 
     // Keep Track of Active Tunnels
-    private List<GameObject> activeTunnels;
+    private List<GameObject> activeTunnels = null;
     private int lastTunnelIndex = 0;
-    private int numberOfTunnelsGenerated;
+    private int numberOfTunnelsGenerated = 0;
     #endregion
 
     #region Start

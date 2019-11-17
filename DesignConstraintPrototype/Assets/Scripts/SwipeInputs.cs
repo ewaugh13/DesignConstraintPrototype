@@ -7,7 +7,7 @@ public class SwipeInputs : MonoBehaviour
     #region Instance Variables
     [SerializeField]
     [Tooltip("The Rotate Tunnel Component")]
-    private RotateTunnel[] rotateTunnels = null;
+    private RotateTunnel rotateTunnel = null;
     #endregion
 
     #region Hidden Variables
@@ -18,7 +18,7 @@ public class SwipeInputs : MonoBehaviour
 
     void Start()
     {
-        dragDistance = Screen.height * 7.5f / 100; //dragDistance is 7.5% height of the screen
+        dragDistance = Screen.height * 2.5f / 100; //dragDistance is 2.5% height of the screen
         Debug.developerConsoleVisible = true;
     }
 
@@ -51,19 +51,13 @@ public class SwipeInputs : MonoBehaviour
                         if ((LastTouchPoint.x > FirstTouchPoint.x))
                         {   
                             Debug.Log("Right Swipe");
-                            for (int i = 0; i < rotateTunnels.Length; i++)
-                            {
-                                rotateTunnels[i].RotateRight();
-                            }
+                            rotateTunnel.RotateRight();
                         }
                         //Left swipe
                         else
                         {   
                             Debug.Log("Left Swipe");
-                            for (int i = 0; i < rotateTunnels.Length; i++)
-                            {
-                                rotateTunnels[i].RotateLeft();
-                            }
+                            rotateTunnel.RotateLeft();
                         }
                     }
                 }

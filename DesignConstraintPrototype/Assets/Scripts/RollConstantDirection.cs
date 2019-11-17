@@ -56,7 +56,7 @@ public class RollConstantDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.onGround && isDLCScreen == false)
+        if (GameManager.onGround && isDLCScreen == false)
         {
             this.gameObject.transform.position += (objectMovementDirection * Time.deltaTime * movementSpeed);
             this.gameObject.transform.Rotate(objectMovementRotation * Time.deltaTime * rotationSpeed);

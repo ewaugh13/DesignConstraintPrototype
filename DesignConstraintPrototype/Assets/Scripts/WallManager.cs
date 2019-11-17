@@ -4,65 +4,97 @@ using UnityEngine;
 
 public class WallManager : MonoBehaviour
 {
-    #region MemberVariables
-    // Tunnel Prefabs
+    #region Instance Variables
+    [Header("Tunnel Prefabs")]
+    [SerializeField]
+    private GameObject[] startTunnelPrefabs = null;
     [SerializeField]
     private GameObject[] earlyTunnelPrefabs = null;
     [SerializeField]
     private GameObject[] midTunnelPrefabs = null;
     [SerializeField]
     private GameObject[] lateTunnelPrefabs = null;
+    [SerializeField]
+    private GameObject[] finalTunnelPrefabs = null;
 
     // Location to Generate
+    [Header("Player and Tunnel attributes")]
     [SerializeField]
     private Transform playerTransform = null;
-    private float tunnelSpawnLocationZ = 0.0f;
-
-    // Tunnel Details
     [SerializeField]
     private float tunnelLength = 60.0f;
-    //private int tunnelsOnScreen = 2;
+    [SerializeField]
+    private int numStartTunnels = 5;
+    [SerializeField]
+    private int numEarlyTunnels = 10;
+    [SerializeField]
+    private int numMidTunnels = 20;
+    [SerializeField]
+    private int numLateTunnels = 40;
+    #endregion
 
+    #region HiddenVariables
+    private float tunnelSpawnLocationZ = 0.0f;
     // Keep Track of Active Tunnels
     private List<GameObject> activeTunnels = null;
     private int lastTunnelIndex = 0;
     private int numberOfTunnelsGenerated = 0;
+    private int numActiveTunnelsAllowed = 12;
     #endregion
 
-    #region Start
     void Start()
     {
         // Holds the tunnel objects on the screen
         activeTunnels = new List<GameObject>();
-        SpawnTunnel(earlyTunnelPrefabs);
+        for (int i = 0; i < numStartTunnels; i++)
+        {
+            SpawnTunnel(startTunnelPrefabs);
+        }
+        TurnOnStartLights();
     }
-    #endregion
 
-    #region Update
+
     void Update()
     {
         // Spawning Tunnels
-        if(playerTransform.position.z > (tunnelSpawnLocationZ - (tunnelLength / 2)))
+        if (playerTransform != null)
         {
-            if(numberOfTunnelsGenerated < 3)
+            if (playerTransform.position.z > (tunnelSpawnLocationZ - (tunnelLength * 10)))
             {
-                SpawnTunnel(midTunnelPrefabs);
+                if (numberOfTunnelsGenerated - numStartTunnels < numEarlyTunnels)
+                {
+                    SpawnTunnel(earlyTunnelPrefabs);
+                }
+                else if (numberOfTunnelsGenerated - numStartTunnels - numEarlyTunnels < numMidTunnels)
+                {
+                    SpawnTunnel(midTunnelPrefabs);
+                }
+                else if (numberOfTunnelsGenerated - numStartTunnels - numEarlyTunnels - numMidTunnels < numLateTunnels)
+                {
+                    SpawnTunnel(lateTunnelPrefabs);
+                }
+                else
+                {
+                    SpawnTunnel(finalTunnelPrefabs);
+                }
             }
-            else
-            {
-                SpawnTunnel(lateTunnelPrefabs);
-            }
-        }
 
-        // Deleting Tunnels
-        if(activeTunnels.Count > 2)
-        {
-            DeleteTunnel();
+            // Deleting Tunnels
+            if (activeTunnels.Count > numActiveTunnelsAllowed)
+            {
+                DeleteTunnel();
+            }
         }
     }
-    #endregion
 
-    #region SpawnTunnel
+    private void TurnOnStartLights()
+    {
+        for (int i = 0; i < activeTunnels.Count; i++)
+        {
+            activeTunnels[i].GetComponentInChildren<Light>().enabled = true;
+        }
+    }
+
     private void SpawnTunnel(GameObject[] tunnelPrefabs)
     {
         GameObject tunnel;
@@ -72,18 +104,15 @@ public class WallManager : MonoBehaviour
         numberOfTunnelsGenerated++;
         activeTunnels.Add(tunnel);
         tunnel.transform.SetParent(this.transform);
+        tunnel.transform.rotation = tunnel.transform.parent.GetChild(0).transform.rotation;
     }
-    #endregion
 
-    #region DeleteTunnel
     private void DeleteTunnel()
     {
         Destroy(activeTunnels[0]);
         activeTunnels.RemoveAt(0);
     }
-    #endregion
 
-    #region RandomTunnelIndex
     // Random Index Generator
     private int RandomTunnelIndex(GameObject[] tunnelPrefabs)
     {
@@ -97,9 +126,7 @@ public class WallManager : MonoBehaviour
         {
             randomIndex = Random.Range(0, tunnelPrefabs.Length);
         }
-
         lastTunnelIndex = randomIndex;
         return randomIndex;
     }
-    #endregion
 }

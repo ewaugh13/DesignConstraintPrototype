@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,13 +17,13 @@ public class PlayerCollision : MonoBehaviour
     private void Start()
     {
         sceneToLoad = SceneManager.GetActiveScene();
-        GameController.isDead = false;
-        GameController.onGround = true;
+        GameManager.isDead = false;
+        GameManager.onGround = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag.Equals("Obsticale"))
+        if (collision.gameObject.tag.Equals("Obsticale"))
         {
             KillAndRespawnPlayer();
         }
@@ -50,26 +49,26 @@ public class PlayerCollision : MonoBehaviour
 
     public bool CheckOnGround()
     {
-        if (this.gameObject != null)
+        if (this != null && this.gameObject != null)
         {
             Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.0f);
-            GameController.onGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hitInfo, 1.0f);
+            GameManager.onGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hitInfo, 1.0f);
             if (hitInfo.collider != null && hitInfo.collider.gameObject.tag.Equals("Pit"))
             {
-                GameController.onGround = false;
+                GameManager.onGround = false;
             }
-            return GameController.onGround;
+            return GameManager.onGround;
         }
         else
         {
-            GameController.onGround = false;
+            GameManager.onGround = false;
         }
-        return GameController.onGround;
+        return GameManager.onGround;
     }
 
     private void KillAndRespawnPlayer()
     {
-        GameController.isDead = true;
+        GameManager.isDead = true;
     }
 
     private IEnumerator WaitKillPlusRespawn(float time)

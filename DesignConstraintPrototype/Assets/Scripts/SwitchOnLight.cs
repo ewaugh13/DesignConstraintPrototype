@@ -16,15 +16,26 @@ public class SwitchOnLight : MonoBehaviour
         {
             if (this.gameObject.GetComponent<Light>() != null)
             {
-                this.gameObject.GetComponent<Light>().enabled = !this.gameObject.GetComponent<Light>().enabled;
+                if (other.gameObject.name.Contains("Forward"))
+                {
+                    this.gameObject.GetComponent<Light>().enabled = true;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<Light>().enabled = false;
+                }
             }
             else if (this.GetComponent<ParticleSystem>() != null)
             {
                 var particle = this.GetComponent<ParticleSystem>();
                 particle.Play();
-
             }
         }
     }
     #endregion
+
+    private void Update()
+    {
+        this.gameObject.GetComponent<Light>().intensity = GameManager.currentLightIntensity;
+    }
 }

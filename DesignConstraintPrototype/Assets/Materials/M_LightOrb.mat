@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_VomBall
+  m_Name: M_LightOrb
   m_Shader: {fileID: -6465566751694194690, guid: 4dbf1c7f0d0832942ba66b860d231d15,
     type: 3}
   m_ShaderKeywords: 
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_F2914074:
-        m_Texture: {fileID: 2800000, guid: 8eddec7aeee71a44391cc9c5b8ffe9c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: ed15356119d53464da3c787aafb117d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -69,16 +69,13 @@ Material:
     - Boolean_564CC371: 0
     - Vector1_14DC7F4F: 1
     - Vector1_24254A74: 1
-    - Vector1_45C467DC: 5.75
-    - Vector1_967654C3: 1
+    - Vector1_45C467DC: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _ColorIntensity: 0.9195255
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _EmissiveIntensity: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -95,8 +92,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_EB0D9F9F: {r: 1, g: 0, b: 0.42906666, a: 0}
+    - Color_EB0D9F9F: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

@@ -45,6 +45,7 @@ Transform:
   - {fileID: 2809165234634302833}
   - {fileID: 1283386564792896770}
   - {fileID: 4648685190348146522}
+  - {fileID: 8568030567807678653}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -181,7 +182,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6079651151526680731}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -966,6 +967,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2711935130396784844}
     m_Modifications:
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_Name
+      value: DangerSpike_Ceiling
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374773463419662550, guid: f2d13c1537b30c64d8a464b86c5091c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1020,16 +1031,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_Name
-      value: DangerSpike_Ceiling
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d13c1537b30c64d8a464b86c5091c3, type: 3}
@@ -1126,6 +1127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2711935130396784844}
     m_Modifications:
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_Name
+      value: DangerSpike_R_Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374773463419662550, guid: f2d13c1537b30c64d8a464b86c5091c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1180,16 +1191,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_Name
-      value: DangerSpike_R_Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d13c1537b30c64d8a464b86c5091c3, type: 3}
@@ -1286,6 +1287,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2711935130396784844}
     m_Modifications:
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_Name
+      value: DangerSpike_Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374773463419662550, guid: f2d13c1537b30c64d8a464b86c5091c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1341,16 +1352,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_Name
-      value: DangerSpike_Floor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d13c1537b30c64d8a464b86c5091c3, type: 3}
 --- !u!4 &9003569838013003650 stripped
@@ -1358,6 +1359,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4374773463419662550, guid: f2d13c1537b30c64d8a464b86c5091c3,
     type: 3}
   m_PrefabInstance: {fileID: 4631189541200365396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7742427202197163156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2711935130396784844}
+    m_Modifications:
+    - target: {fileID: 3156525517499467322, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_Name
+      value: LightOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156525517499467322, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156525517499467322, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: LightOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.000000104308114
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29ec651d904fc29468be1a01d09aaa6e, type: 3}
+--- !u!4 &8568030567807678653 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2131718726206485545, guid: 29ec651d904fc29468be1a01d09aaa6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7742427202197163156}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8082740124870383322
 PrefabInstance:
@@ -1451,6 +1537,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2711935130396784844}
     m_Modifications:
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_Name
+      value: DangerSpike_L_Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374773463419662550, guid: f2d13c1537b30c64d8a464b86c5091c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1505,16 +1601,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_Name
-      value: DangerSpike_L_Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084988022579040685, guid: f2d13c1537b30c64d8a464b86c5091c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d13c1537b30c64d8a464b86c5091c3, type: 3}

@@ -7,17 +7,15 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameController.score = 0;
+        GameManager.score = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(!GameController.isDead) // only if the player is not dead
+        if(!GameManager.isDead) // only if the player is not dead
         {
-            GameController.score += Mathf.Floor(Time.deltaTime * 100);
-            // Debug.Log(GameController.score);
+            GameManager.score += (int)(Time.deltaTime * 100);
         }
-
     }
 }

@@ -10,23 +10,28 @@ public class FollowPlayer : MonoBehaviour
     private GameObject FollowObject = null;
     [SerializeField]
     private Vector3 Offset = Vector3.zero;
-    #endregion
-
-    #region Hidden Variables
-    private PlayerCollision playerCollision = null;
+    [SerializeField]
+    private bool ballNeedsToBeGrounded = true;
     #endregion
 
     private void Start()
     {
-        playerCollision = FollowObject.GetComponent<PlayerCollision>();
         transform.position = FollowObject.transform.position - Offset;
     }
 
     void Update()
     {
-        if (GameController.onGround && FollowObject != null)
+        if(FollowObject != null)
         {
-            transform.position = FollowObject.transform.position - Offset;
+            // for object that only follow the ball when its on the ground (camera)
+            if(ballNeedsToBeGrounded && GameManager.onGround)
+            {
+                transform.position = FollowObject.transform.position - Offset;
+            }
+            else if(!ballNeedsToBeGrounded)
+            {
+                transform.position = FollowObject.transform.position - Offset;
+            }
         }
     }
 }

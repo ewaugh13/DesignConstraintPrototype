@@ -20,9 +20,6 @@ public class DamagePlayer : MonoBehaviour
     [Tooltip("Death message")]
     [SerializeField]
     private string DeathMsg = "";
-    [Tooltip("DLC scene to open")]
-    [SerializeField]
-    private string dlcScene = "";
     #endregion
 
     #region Hidden Variables
@@ -39,12 +36,12 @@ public class DamagePlayer : MonoBehaviour
     void Update()
     {
         // just a pseudo code of what needs to be done. Fell free to move this code where the game manages death condition
-        if (GameController.isDead && player != null) // just a bool var in gameController that will be set for the death condition
+        if (GameManager.isDead && player != null) // just a bool var in gameController that will be set for the death condition
         {
             Destroy(player); // destroy the ball so the camera does not move forward
-            GameController.deaths += 1; // increase death counter for the DLC screen
+            GameManager.deaths += 1; // increase death counter for the DLC screen
 
-            DeathUIText.GetComponent<Text>().text = DeathMsg + GameController.score.ToString();
+            DeathUIText.GetComponent<Text>().text = DeathMsg + GameManager.score.ToString();
             DeathUI.SetActive(true);
 
             StartCoroutine(Delay());
@@ -54,15 +51,12 @@ public class DamagePlayer : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(WaitForSec);
-        if (GameController.deaths % 5 == 0) // Every 5 deaths, display DLC if not, display death screen
-            SceneManager.LoadScene(dlcScene);
-        else 
-            ResetScene();
+        ResetScene();
     }
 
     private void ResetScene()
     {
-        //DeathUI.SetActive(false);
+        GameManager.currentLightIntensity = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

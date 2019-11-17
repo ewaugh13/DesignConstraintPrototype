@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5356292748820078432}
   - component: {fileID: 8181468310715326192}
   - component: {fileID: 3569016284060838121}
-  - component: {fileID: 7190346389234039288}
   - component: {fileID: 4638044040420854975}
   m_Layer: 0
   m_Name: PitParticle
@@ -4755,18 +4754,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7190346389234039288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8793483726371364232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154044365a7a5eb4f82f1bae2b9239f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &4638044040420854975
 SphereCollider:
   m_ObjectHideFlags: 0

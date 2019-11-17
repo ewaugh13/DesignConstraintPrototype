@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.isDead && !DeadMusicPlaying)
+        if (GameManager.isDead && !DeadMusicPlaying)
         {
             AliveMusic.GetComponent<AudioSource>().Stop();
             DeadMusic.GetComponent<AudioSource>().Play();

@@ -794,6 +794,26 @@ PrefabInstance:
       propertyPath: Offset.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6326861518770892921, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b03842d327dfe54aae26e680864322c, type: 2}
+    - target: {fileID: 6326861518770892927, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326861518770892927, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326861518770892805, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8727828387907207021, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a6f3ec2e9f7e72d45b6c5fe418d251a5, type: 3}
@@ -1670,7 +1690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialToDarken: {fileID: 2100000, guid: 75d7f85b02cfe184daffc6414d0b0c05, type: 2}
   startEmissiveIntensity: 5.75
-  lightDecreaseAmount: 0.05
+  lightDecreaseAmount: 0.075
 --- !u!4 &1853534488
 Transform:
   m_ObjectHideFlags: 0

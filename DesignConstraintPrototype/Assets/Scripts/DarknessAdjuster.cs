@@ -50,6 +50,6 @@ public class DarknessAdjuster : MonoBehaviour
     void OnApplicationQuit()
     {
         materialToDarken.SetFloat(emissiveIntensityName, startEmissiveIntensity);
-        materialToDarken.SetFloat(emissiveIntensityName, 1.0f);
+        materialToDarken.SetFloat(colorIntensityName, 1.0f);
     }
 }

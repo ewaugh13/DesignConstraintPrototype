@@ -1,1 +1,2 @@
-# Prototype made for Android devices developed in Unity3D.
+# Prototype made for Android devices
+Developed in Unity3D.
